@@ -12,7 +12,7 @@ export default defineConfig({
     libInjectCss(),
     dts({
       tsconfigPath: "./tsconfig.app.json",
-      exclude: ["**/*.test.tsx"],
+      exclude: ["**/*.test.tsx", "src/setup-tests.ts", "**/*.stories.ts"],
     }),
   ],
   build: {

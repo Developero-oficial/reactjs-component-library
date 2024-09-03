@@ -9,16 +9,27 @@
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
     "test": "vitest",
-    "prepare": "husky"
+    "prepare": "husky",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^1.8.0",
     "@commitlint/cli": "^19.4.1",
     "@commitlint/config-conventional": "^19.4.1",
     "@eslint/js": "^9.9.0",
+    "@storybook/addon-essentials": "^8.2.9",
+    "@storybook/addon-interactions": "^8.2.9",
+    "@storybook/addon-links": "^8.2.9",
+    "@storybook/addon-onboarding": "^8.2.9",
+    "@storybook/blocks": "^8.2.9",
+    "@storybook/react": "^8.2.9",
+    "@storybook/react-vite": "^8.2.9",
+    "@storybook/test": "^8.2.9",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
     "@types/node": "^22.5.2",
@@ -30,12 +41,14 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
+    "eslint-plugin-storybook": "^0.8.0",
     "globals": "^15.9.0",
     "husky": "^9.1.5",
     "jsdom": "^25.0.0",
     "lint-staged": "^15.2.10",
     "postcss": "^8.4.44",
     "prettier": "^3.3.3",
+    "storybook": "^8.2.9",
     "tailwindcss": "^3.4.10",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
@@ -43,5 +56,11 @@
     "vite-plugin-dts": "^4.1.0",
     "vite-plugin-lib-inject-css": "^2.1.1",
     "vitest": "^2.0.5"
+  },
+  "packageManager": "pnpm@9.6.0+sha512.38dc6fba8dba35b39340b9700112c2fe1e12f10b17134715a4aa98ccf7bb035e76fd981cf0bb384dfa98f8d6af5481c2bef2f4266a24bfa20c34eb7147ce0b5e",
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }
