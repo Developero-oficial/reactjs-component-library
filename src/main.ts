@@ -1,5 +1,4 @@
 import "./main.css";
 
-export const helloLibrary = () => {
-  console.log("Hello, Library!");
-};
+export { Button } from "./components/button";
+export type { ButtonProps } from "./components/button";
